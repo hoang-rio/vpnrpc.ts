@@ -32,7 +32,7 @@ if (VPN.VpnServerRpc.IsNodeJS() === false) // // Determine if this JavaScript en
 else
 {
     // On the Node.js. We need to specify the target VPN Server's hostname, port and credential.
-    api = new VPN.VpnServerRpc("127.0.0.1", 443, "", "PASSWORD_HERE", false);
+    api = new VPN.VpnServerRpc("127.0.0.1", 5556, "", "microsoft", false);
 }
 
 // A variable for test

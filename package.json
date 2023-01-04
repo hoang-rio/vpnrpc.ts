@@ -1,11 +1,12 @@
 {
-  "name": "vpnrpc_chyz",
-  "version": "1.0.2",
+  "name": "vpnrpc_se5",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/vpnrpc.js",
   "scripts": {
     "prepare": "tsc",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "tsc && node dist/sample.js"
   },
   "repository": {
     "type": "git",

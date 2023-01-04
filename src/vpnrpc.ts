@@ -58,9 +58,12 @@ export class VpnServerRpc
             if (is_null(vpnserver_port)) vpnserver_port = 443;
             this.rpc_url = `https://${vpnserver_hostname}:${vpnserver_port}/api/`;
 
-
-            headers["X-VPNADMIN-HUBNAME"] = is_null(hubname) ? "" : hubname!;
-            headers["X-VPNADMIN-PASSWORD"] = is_null(password) ? "" : password!;
+            if (hubname) {
+                headers["X-VPNADMIN-HUBNAME"] = hubname!;
+            }
+            if (password) {
+                headers["X-VPNADMIN-PASSWORD"] = password!;
+            }
         }
 
         if (is_null(nodejs_https_client_reject_untrusted_server_cert)) nodejs_https_client_reject_untrusted_server_cert = false;
